@@ -11,20 +11,47 @@
 </head>
 <body>
     <div class="container">
-        <h3 class="title">To Do List</h3>
-
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">+</button>
+        <h3 class="title text-center">To Do List</h3>
+        <!-- Form with input field and submit button -->
+        <form id="taskForm">
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input class="form-control taskName" type="text" class="form-control">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit" id="submitBtn">+</button>
+                    </div>
+                </div>
             </div>
+        </form>
+        <!-- Display the to do list -->
+        <div class="card">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Milk
+                    <a>
+                        <span class="badge badge-success badge-pill"><i class="fa fa-check"></i></span>
+                        <span class="badge badge-danger badge-pill"><i class="fa fa-remove"></i></span>
+                    </a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Egg
+                    <a>
+                        <span class="badge badge-success badge-pill"><i class="fa fa-check"></i></span>
+                        <span class="badge badge-danger badge-pill"><i class="fa fa-remove"></i></span>
+                    </a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Bread
+                    <a>
+                        <span class="badge badge-success badge-pill"><i class="fa fa-check"></i></span>
+                        <span class="badge badge-danger badge-pill"><i class="fa fa-remove"></i></span>
+                    </a>
+                  </li>
+            </ul>
         </div>
 
 
     </div>
-
-
-
 
 
     <!-- JQuery -->
