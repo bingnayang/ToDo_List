@@ -2,6 +2,7 @@
 const form = document.querySelector('#taskForm');
 const taskList = document.querySelector('.list-group');
 const taskInput = document.querySelector('#taskName');
+const clearAll = document.querySelector('.clearTaskBtn');
 
 // Load all eventlisteners
 loadAllEventListeners();
@@ -12,6 +13,10 @@ function loadAllEventListeners(){
     form.addEventListener('submit',addListTask);
     // Remove task event
     taskList.addEventListener('click',removeListTask);
+    // Cross out task event
+    taskList.addEventListener('click',crossOutTask);
+    // Clear all the list
+    clearAll.addEventListener('click',clearAllTask);
 }
 
 // Add List Task Function
@@ -44,5 +49,19 @@ function addListTask(e){
 function removeListTask(e){
     if(e.target.parentElement.classList.contains('badge-danger')){
         e.target.parentElement.parentElement.parentElement.remove();
+    }
+}
+
+// Cross List Task Function
+function crossOutTask(e){
+    if(e.target.parentElement.classList.contains('badge-info')){
+        e.target.parentElement.parentElement.parentElement.style.color = "red";
+    }
+}
+
+// Clear all Task List Function
+function clearAllTask(){
+    while(taskList.firstChild){
+        taskList.removeChild(taskList.firstChild);
     }
 }
