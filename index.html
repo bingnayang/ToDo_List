@@ -7,36 +7,41 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <!-- Font-Awesome -->
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+        <!-- Style File -->
+        <link rel="stylesheet" href="style.css">
     <title>To Do List</title>
 </head>
 <body>
     <div class="container">
-        <h3 class="title text-center">To Do List</h3>
-        <!-- Form with input field and submit button -->
-        <form id="taskForm">
-            <div class="form-group">
-                <div class="input-group mb-3">
-                    <input class="form-control" id="taskName" type="text" class="form-control">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="submit" id="submitBtn">+</button>
+        <div class="topContainer">
+            <h3 class="title text-center">To Do List</h3>
+            <p id="todayDate" class="text-center"></p>
+
+            <!-- Form with input field and submit button -->
+            <form id="taskForm">
+                <div class="form-group">
+                    <div class="input-group mb-3">
+                        <input class="form-control" id="taskName" type="text" class="form-control">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit" id="submitBtn">+</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
         <!-- Display the to do list -->
-        <div class="card">
+        <div class="centerContainer card">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Milk
-                    <a>
-                        <span class="badge badge-info badge-secondary"><i class="fa fa-check"></i></span>
-                        <span class="badge badge-danger badge-secondary"><i class="fa fa-remove"></i></span>
-                    </a>
+                    <span class="badge badge-danger badge-secondary"><i class="fa fa-remove"></i></span>
                   </li>
             </ul>
         </div>
-        <div class="card">
-            <button type="button" class="btn btn-outline-danger btn-lg btn-block clearTaskBtn">Clear All</button>
+        <div class="bottomContainer row">
+            <button type="button" class="btn btn-danger clearTaskBtn col align-self-center">Clear All</button>
         </div>
 
 

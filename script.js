@@ -9,12 +9,14 @@ loadAllEventListeners();
 
 // Load all event listeners function
 function loadAllEventListeners(){
+    let date = new Date();
+    document.getElementById("todayDate").innerHTML = date;
+
+
     // Add task event
     form.addEventListener('submit',addListTask);
     // Remove task event
     taskList.addEventListener('click',removeListTask);
-    // Cross out task event
-    taskList.addEventListener('click',crossOutTask);
     // Clear all the list
     clearAll.addEventListener('click',clearAllTask);
 }
@@ -30,13 +32,15 @@ function addListTask(e){
     li.className = 'list-group-item d-flex justify-content-between align-items-center';
     // Append the input value to li
     li.appendChild(document.createTextNode(taskInput.value));
+
     // Create a element
-    const aElement = document.createElement('a');
+    const spanElement = document.createElement('span');
+    // Add class name to span element
+    spanElement.className = 'badge badge-danger badge-secondary';
     // Add html
-    aElement.innerHTML = `<span class="badge badge-info badge-secondary"><i class="fa fa-check"></i></span>
-    <span class="badge badge-danger badge-secondary"><i class="fa fa-remove"></i></span>`;
+    spanElement.innerHTML = `<i class="fa fa-remove"></i>`;
     // Append the a element to li
-    li.appendChild(aElement);
+    li.appendChild(spanElement);
 
     // Append li to ul
     taskList.appendChild(li);
@@ -48,14 +52,7 @@ function addListTask(e){
 // Remove List Task Function
 function removeListTask(e){
     if(e.target.parentElement.classList.contains('badge-danger')){
-        e.target.parentElement.parentElement.parentElement.remove();
-    }
-}
-
-// Cross List Task Function
-function crossOutTask(e){
-    if(e.target.parentElement.classList.contains('badge-info')){
-        e.target.parentElement.parentElement.parentElement.style.color = "red";
+        e.target.parentElement.parentElement.remove();
     }
 }
 
