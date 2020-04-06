@@ -1,28 +1,4 @@
 body{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
-.container{
-    margin-top: 5%;
-    border: solid #313e50;
-    border-radius: 25px;
-    padding: 0;
-}
-.topContainer{
-    background-color: #313e50;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    padding: 15px;
-}
-.clearTaskBtn{
-    margin: 25px;
-}
-.btn-outline-secondary{
-    background-color: #1dd2af;
-    color:white;
-}
-.fa{
-    padding: 5px;
-}
-.text-center{
-    color: white;
-}
+
