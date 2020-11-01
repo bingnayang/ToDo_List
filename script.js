@@ -36,9 +36,9 @@ function addListTask(e){
     // Create a element
     const spanElement = document.createElement('span');
     // Add class name to span element
-    spanElement.className = 'badge badge-danger badge-secondary';
+    spanElement.className = 'badge badge-light badge-secondary';
     // Add html
-    spanElement.innerHTML = `<i class="fa fa-remove"></i>`;
+    spanElement.innerHTML = `<i class="fa fa-close"></i>`;
     // Append the a element to li
     li.appendChild(spanElement);
 
@@ -51,14 +51,7 @@ function addListTask(e){
 
 // Remove List Task Function
 function removeListTask(e){
-    if(e.target.parentElement.classList.contains('badge-danger')){
+    if(e.target.parentElement.classList.contains('badge-light')){
         e.target.parentElement.parentElement.remove();
-    }
-}
-
-// Clear all Task List Function
-function clearAllTask(){
-    while(taskList.firstChild){
-        taskList.removeChild(taskList.firstChild);
     }
 }
